@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebacff9882021cb4987d7dfb2ed409a0, type: 3}
+  m_Name: New Dialogue Tree
+  m_EditorClassIdentifier: 
+  sections:
+  - dialogueContent:
+    - characterName: Vincent
+      dialogueText: "ST\xD3\xD3\xD3\xD3\xD3\xD3\u0141"
+    - characterName: "St\xF3\u0142"
+      dialogueText: VIIIIIIIIIIIIIIINCENT
+    endAfterDialogue: 0
+    branchPoint:
+      question: jebiesz disa?
+      answers:
+      - answerLabel: TA
+        nextElement: 0
+      - answerLabel: NIE
+        nextElement: 1
+  - dialogueContent:
+    - characterName: "St\xF3\u0142"
+      dialogueText: "ST\xD3\xD3\xD3\xD3\xD3\xD3\u0141"
+    - characterName: "St\xF3\u0142"
+      dialogueText: VIIIIIIIIIIIIIIINCENT
+    endAfterDialogue: 1
+    branchPoint:
+      question: jebiesz disa?
+      answers:
+      - answerLabel: 
+        nextElement: 0

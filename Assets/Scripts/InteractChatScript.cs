@@ -7,12 +7,11 @@ public class InteractChat : MonoBehaviour
     [SerializeField] bool firstInteraction = true;
     [SerializeField] int repeatStartPosition;
 
-    public string npcName;
-    public DialogueAsset dialogueAsset;
+    [SerializeField] public DialogueTree dialogueAsset;
     
     [HideInInspector]
     public int StartPosition
-    {
+    {   
         get
         {
             if (firstInteraction)
