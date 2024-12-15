@@ -14,23 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sections:
   - dialogueContent:
-    - characterName: Vincent
-      dialogueText: "ST\xD3\xD3\xD3\xD3\xD3\xD3\u0141"
     - characterName: "St\xF3\u0142"
-      dialogueText: VIIIIIIIIIIIIIIINCENT
+      dialogueText: Wielki test drzew dialogowych
+    - characterName: "St\xF3\u0142"
+      dialogueText: "W ko\u0144cu leniwemu programi\u015Bcie si\u0119 za chcia\u0142o
+        to sko\u0144czy\u0107"
     endAfterDialogue: 0
+    branchPoint:
+      question: "dzia\u0142a to chocia\u017C?"
+      answers:
+      - answerLabel: "Ale\u017C Oczywi\u015Bcie"
+        nextElement: 1
+      - answerLabel: "NIE DZIA\u0141A"
+        nextElement: 2
+      - answerLabel: "A ci powiem \u017Ce pewny nie jestem"
+        nextElement: 0
+  - dialogueContent:
+    - characterName: "St\xF3\u0142"
+      dialogueText: To Bardzo Klawo
+    - characterName: "St\xF3\u0142"
+      dialogueText: "A teraz bierz si\u0119 do roboty z reszt\u0105"
+    endAfterDialogue: 1
     branchPoint:
       question: jebiesz disa?
       answers:
-      - answerLabel: TA
+      - answerLabel: 
         nextElement: 0
-      - answerLabel: NIE
-        nextElement: 1
   - dialogueContent:
     - characterName: "St\xF3\u0142"
-      dialogueText: "ST\xD3\xD3\xD3\xD3\xD3\xD3\u0141"
+      dialogueText: TO NAPRAWIAJ TO
     - characterName: "St\xF3\u0142"
-      dialogueText: VIIIIIIIIIIIIIIINCENT
+      dialogueText: A KYSZ
     endAfterDialogue: 1
     branchPoint:
       question: jebiesz disa?

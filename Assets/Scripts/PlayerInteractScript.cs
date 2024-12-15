@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerInteractScript : MonoBehaviour
 {
-    bool inConvo = false;
+    public bool inConvo = false;
     bool inInteract = false;
     InteractChat interactable;
     void Update()

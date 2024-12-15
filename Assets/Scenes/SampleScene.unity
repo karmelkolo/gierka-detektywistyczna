@@ -648,8 +648,8 @@ Transform:
   m_GameObject: {fileID: 196889633}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.86, y: 1.576, z: 0}
-  m_LocalScale: {x: 3.0213027, y: 8.356386, z: 1}
+  m_LocalPosition: {x: -26.318, y: 1.437, z: 0}
+  m_LocalScale: {x: 4.685134, y: 33.96286, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -690,8 +690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 603, y: 31.876}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 388.31, y: 52}
+  m_SizeDelta: {x: 589.38, y: 70.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255318692
 MonoBehaviour:
@@ -736,7 +736,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 255318693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 507612806}
+        m_TargetAssemblyTypeName: DialogueBoxControllerMulti, Assembly-CSharp
+        m_MethodName: AnswerQuestion
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &255318693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,8 +911,8 @@ Transform:
   m_GameObject: {fileID: 272024420}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0182, y: -4.19, z: 0}
-  m_LocalScale: {x: 20.511623, y: 3.604092, z: 1}
+  m_LocalPosition: {x: -0.3148, y: -12.041, z: 0}
+  m_LocalScale: {x: 51.278893, y: 6.8865333, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -989,7 +1001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &507612806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,6 +1050,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1113,12 +1126,28 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.195173, y: -0.40251863, z: -11.520676}
+  m_LocalPosition: {x: 1.31, y: -1.43, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 922240041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4352897ac50e7164999c97d0f2b657a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1553446040}
+  offset: {x: 0, y: 0, z: -10}
+  minPos: {x: -15, y: -6, z: -10}
+  maxPos: {x: 15, y: 12, z: -10}
 --- !u!1 &742178730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,8 +1272,8 @@ Transform:
   m_GameObject: {fileID: 742178730}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.33, y: 0.5942, z: 0}
-  m_LocalScale: {x: 4.2705197, y: 11.568774, z: 1}
+  m_LocalPosition: {x: 24.1538, y: 6.1302, z: 0}
+  m_LocalScale: {x: 3.1522658, y: 31.104153, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1392,6 +1421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 922240041}
+  - component: {fileID: 922240042}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1414,6 +1444,97 @@ Transform:
   m_Children:
   - {fileID: 1553446040}
   - {fileID: 519420032}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &922240042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922240040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d647c6c2ce8b5428ea95c574c909b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  _rb: {fileID: 1553446043}
+--- !u!1 &924399172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924399174}
+  - component: {fileID: 924399173}
+  m_Layer: 0
+  m_Name: WorldBounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!61 &924399173
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924399172}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.9402962, y: 2.3512435}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 51.691223, y: 25.583885}
+  m_EdgeRadius: 0
+--- !u!4 &924399174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924399172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9495715, y: 1.0195248, z: 8.125647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954789558
@@ -1452,8 +1573,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 603, y: -28}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 388.31006, y: -35.205}
+  m_SizeDelta: {x: 589.38, y: 70.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954789560
 MonoBehaviour:
@@ -1498,7 +1619,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 954789561}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 507612806}
+        m_TargetAssemblyTypeName: DialogueBoxControllerMulti, Assembly-CSharp
+        m_MethodName: AnswerQuestion
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &954789561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1555,7 +1688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1020287369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,8 +1885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 603, y: -90}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 388.31, y: -125}
+  m_SizeDelta: {x: 589.38, y: 70.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087351693
 MonoBehaviour:
@@ -1798,7 +1931,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1087351694}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 507612806}
+        m_TargetAssemblyTypeName: DialogueBoxControllerMulti, Assembly-CSharp
+        m_MethodName: AnswerQuestion
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1087351694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2039,10 +2184,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1553446040}
   - component: {fileID: 1553446039}
+  - component: {fileID: 1553446045}
   - component: {fileID: 1553446042}
   - component: {fileID: 1553446043}
   - component: {fileID: 1553446044}
-  - component: {fileID: 1553446045}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -2129,7 +2274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d647c6c2ce8b5428ea95c574c909b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 8
   _rb: {fileID: 1553446043}
 --- !u!50 &1553446043
 Rigidbody2D:
@@ -2215,6 +2360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fced8e3952c684c9f997dff3076b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inConvo: 0
 --- !u!1 &1591761947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,8 +2485,8 @@ Transform:
   m_GameObject: {fileID: 1591761947}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0182, y: 6.16, z: 0}
-  m_LocalScale: {x: 20.511623, y: 3.0468106, z: 1}
+  m_LocalPosition: {x: -3.9915, y: 16.7462, z: 0}
+  m_LocalScale: {x: 54.714756, y: 2.954492, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2671,3 +2817,4 @@ SceneRoots:
   - {fileID: 196889636}
   - {fileID: 341313193}
   - {fileID: 507612807}
+  - {fileID: 924399174}

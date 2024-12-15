@@ -47,7 +47,6 @@ public class DialogueBoxControllerMulti : MonoBehaviour
     {
         for (int i = 0; i < dialogueTree.sections[section].dialogueContent.Length; i++)
         {
-            Debug.Log(dialogueTree.sections[section].dialogueContent.Length);
             nameText.text = dialogueTree.sections[section].dialogueContent[i].characterName;
             dialogueText.text = dialogueTree.sections[section].dialogueContent[i].dialogueText;
             while (skipLineTriggered == false)
