@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class PlayerInteractScript : MonoBehaviour
 {
-    bool inConvo = false;
+    public bool inConvo = false;
     bool inInteract = false;
- /*   void Update()
+    InteractChat interactable;
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && inInteract == true)
         {
@@ -16,10 +17,20 @@ public class PlayerInteractScript : MonoBehaviour
     }
     void Interact()
     {
-        Debug.Log("Interact sie wykonuje");
-        
+
+            if (inConvo)
+            {
+                DialogueBoxControllerMulti.instance.SkipLine();
+            }
+            else
+            {
+
+                DialogueBoxControllerMulti.instance.StartDialogue(interactable.dialogueAsset, interactable.StartPosition);
+                
+            }
+
     }
- */
+ 
     void JoinConversation()
     {
         inConvo = true;
@@ -30,33 +41,25 @@ public class PlayerInteractScript : MonoBehaviour
     }
     private void OnEnable()
     {
-        DialogueBoxController.OnDialogueStarted += JoinConversation;
-        DialogueBoxController.OnDialogueEnded += LeaveConversation;
+        DialogueBoxControllerMulti.OnDialogueStarted += JoinConversation;
+        DialogueBoxControllerMulti.OnDialogueEnded += LeaveConversation;
 
     }
     private void OnDisable()
     {
-        DialogueBoxController.OnDialogueStarted -= JoinConversation;
-        DialogueBoxController.OnDialogueEnded -= LeaveConversation;
+        DialogueBoxControllerMulti.OnDialogueStarted -= JoinConversation;
+        DialogueBoxControllerMulti.OnDialogueEnded -= LeaveConversation;
     }
-    public void OnTriggerStay2D(Collider2D col)
+    public void OnTriggerEnter2D(Collider2D col)
     {
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            if (inConvo)
-            {
-                DialogueBoxController.instance.SkipLine();
-            }
-            else
-            {
-                col.gameObject.TryGetComponent(out InteractChat interactable);
-                Debug.Log(interactable);
-                DialogueBoxController.instance.StartDialogue(interactable.dialogueAsset.dialogue,interactable.StartPosition, interactable.npcName);
-            }
-        }
+        inInteract = true;
+        col.gameObject.TryGetComponent(out InteractChat interactable1);
+        interactable = interactable1;
+       
     }
-    public void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerExit2D(Collider2D col)
     {
         inInteract = false;
+        interactable = null;
     }
 }

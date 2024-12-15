@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebacff9882021cb4987d7dfb2ed409a0, type: 3}
+  m_Name: New Dialogue Tree
+  m_EditorClassIdentifier: 
+  sections:
+  - dialogueContent:
+    - characterName: "St\xF3\u0142"
+      dialogueText: Wielki test drzew dialogowych
+    - characterName: "St\xF3\u0142"
+      dialogueText: "W ko\u0144cu leniwemu programi\u015Bcie si\u0119 za chcia\u0142o
+        to sko\u0144czy\u0107"
+    endAfterDialogue: 0
+    branchPoint:
+      question: "dzia\u0142a to chocia\u017C?"
+      answers:
+      - answerLabel: "Ale\u017C Oczywi\u015Bcie"
+        nextElement: 1
+      - answerLabel: "NIE DZIA\u0141A"
+        nextElement: 2
+      - answerLabel: "A ci powiem \u017Ce pewny nie jestem"
+        nextElement: 0
+  - dialogueContent:
+    - characterName: "St\xF3\u0142"
+      dialogueText: To Bardzo Klawo
+    - characterName: "St\xF3\u0142"
+      dialogueText: "A teraz bierz si\u0119 do roboty z reszt\u0105"
+    endAfterDialogue: 1
+    branchPoint:
+      question: jebiesz disa?
+      answers:
+      - answerLabel: 
+        nextElement: 0
+  - dialogueContent:
+    - characterName: "St\xF3\u0142"
+      dialogueText: TO NAPRAWIAJ TO
+    - characterName: "St\xF3\u0142"
+      dialogueText: A KYSZ
+    endAfterDialogue: 1
+    branchPoint:
+      question: jebiesz disa?
+      answers:
+      - answerLabel: 
+        nextElement: 0

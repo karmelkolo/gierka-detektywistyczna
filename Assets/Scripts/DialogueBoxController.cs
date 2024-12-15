@@ -49,7 +49,7 @@ public class DialogueBoxController : MonoBehaviour {
             skipLineTriggered = false;
         }
         OnDialogueEnded?.Invoke();
-        dialogueBox?.SetActive(false);
+        dialogueBox.SetActive(false);
     }
     public void SkipLine()
     {
